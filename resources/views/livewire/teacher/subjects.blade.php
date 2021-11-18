@@ -22,15 +22,15 @@
 
     <!-- Dashboard -->
      <div class="dashboard" id="dashboard">
-      <div class="container-fluid">
+      <div class="container-fluid" >
         <!-- Small boxes (Stat box) -->
-        <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-between" >
                     <button class="btn btn-primary w-25" wire:click.defer="showSubjectModal">New</button>
                     <input class="form-control mr-sm-2 w-25 " type="search" placeholder="Search" aria-label="Search..." /> 
         </div>
        
         <div class="cards">
-        @foreach ($subjects as $subject )
+        @foreach ($subjects as $subject)
             <a href="{{ route('show_subject' , ['subject' => $subject])}}">
               <div class="card">
                 <h2>{{ $subject->subject_name }}</h2>

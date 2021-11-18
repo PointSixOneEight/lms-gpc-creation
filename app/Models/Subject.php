@@ -30,6 +30,11 @@ class Subject extends Model
     {
         return $this->hasMany(File::class);
     }
+
+    public function tasks()
+    {
+        return $this->hasMany(Task::class);
+    }
     
 
 }

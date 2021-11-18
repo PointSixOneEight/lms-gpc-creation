@@ -147,7 +147,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       }
     })
   })
-  
+
   window.addEventListener('deleted', event=> {
     Swal.fire(
       'Deleted!',
@@ -172,6 +172,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
        toastr.success(event.detail.message , 'Success!');
   })
 
+  /** Show Task Modal  */
+  window.addEventListener('show-task' , event => {
+      $('#taskModal').modal('show');
+  })
+
+  /** Hide Task Modal */
+  window.addEventListener('hide-task-modal' , event => {
+      $('#taskModal').modal('hide');
+  })
+
+   /** Show  Task Success Message */
+    window.addEventListener('hide-task', event => {
+        $('#taskModal').modal('hide');
+        toastr.success(event.detail.message , 'Success!');
+   })
+
+  
   /** Toast Success Message Option*/
   $(document).ready(function() {
     toastr.options = {
